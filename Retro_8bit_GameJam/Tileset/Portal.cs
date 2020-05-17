@@ -38,7 +38,7 @@ public class Portal : Area2D
         if (!saveFile.FileExists("user://save_game.txt") || saveFile.GetLine() == "")
         {
             string str = saveFile.GetLine();
-            str = str.Where(v => char.IsDigit(v)).ToString();
+            str = String.Join("", str.Where(v => char.IsDigit(v)).ToString());
             GD.Print(str);
             if (str.ToInt() <= level)
             {
