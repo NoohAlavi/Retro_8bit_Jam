@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 public class Portal : Area2D
 {
@@ -37,7 +38,7 @@ public class Portal : Area2D
         if (!saveFile.FileExists("user://save_game.txt") || saveFile.GetLine() == "")
         {
             string str = saveFile.GetLine();
-            str = Regex.Replace(str, @"\s", "");
+            str = str.Where(v => char.IsDigit(v)).ToString();
             GD.Print(str);
             if (str.ToInt() <= level)
             {

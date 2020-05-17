@@ -3,3 +3,8 @@ C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\bin\Tools\Retro_8bit_GameJa
 C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\obj\Tools\Retro_8bit_GameJam.csprojAssemblyReference.cache
 C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\obj\Tools\Retro_8bit_GameJam.dll
 C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\obj\Tools\Retro_8bit_GameJam.pdb
+C:\Users\nooha\DocumentS\GitHub\Retro_8bit_Jam\Retro_8bit_GameJam\.mono\temp\bin\Tools\Retro_8bit_GameJam.dll
+C:\Users\nooha\DocumentS\GitHub\Retro_8bit_Jam\Retro_8bit_GameJam\.mono\temp\bin\Tools\Retro_8bit_GameJam.pdb
+C:\Users\nooha\DocumentS\GitHub\Retro_8bit_Jam\Retro_8bit_GameJam\.mono\temp\obj\Tools\Retro_8bit_GameJam.csprojAssemblyReference.cache
+C:\Users\nooha\DocumentS\GitHub\Retro_8bit_Jam\Retro_8bit_GameJam\.mono\temp\obj\Tools\Retro_8bit_GameJam.dll
+C:\Users\nooha\DocumentS\GitHub\Retro_8bit_Jam\Retro_8bit_GameJam\.mono\temp\obj\Tools\Retro_8bit_GameJam.pdb
