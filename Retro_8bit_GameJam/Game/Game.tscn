@@ -1,0 +1,131 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://CRT/CRT.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/Game.cs" type="Script" id=4]
+[ext_resource path="res://Game/04B_30__.TTF" type="DynamicFontData" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Win"
+tracks/0/type = "value"
+tracks/0/path = NodePath("WinPopup/WinScreen/ContinueButton:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("WinPopup/WinScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 12
+font_data = ExtResource( 6 )
+
+[sub_resource type="InputEventAction" id=4]
+action = "ClickButton"
+
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
+
+[node name="Game" type="Node2D"]
+position = Vector2( 32, 112 )
+scale = Vector2( 0.75, 0.75 )
+script = ExtResource( 4 )
+level = 1
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152, 104 )
+speed = 200.0
+gravityForce = 25.0
+jumpForce = 400.0
+maxJumps = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sky" type="ColorRect" parent="CanvasLayer"]
+margin_right = 320.0
+margin_bottom = 240.0
+color = Color( 0.529412, 0.807843, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="CanvasLayer" parent="."]
+
+[node name="ShowPower" type="AcceptDialog" parent="Popup"]
+margin_left = 32.0
+margin_top = 40.0
+margin_right = 290.0
+margin_bottom = 212.0
+window_title = ""
+dialog_text = "Your power:
+
+Jump boost / Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CRT" parent="." instance=ExtResource( 2 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Win = SubResource( 1 )
+
+[node name="WinPopup" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="WinScreen" type="ColorRect" parent="WinPopup"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 302.0
+margin_bottom = 222.0
+color = Color( 0.0784314, 0.52549, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinLabel" type="Label" parent="WinPopup/WinScreen"]
+margin_left = 54.0
+margin_top = 32.0
+margin_right = 228.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 2 )
+text = "You Win!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" type="Button" parent="WinPopup/WinScreen"]
+margin_left = -2.33333
+margin_top = 96.0
+margin_right = 285.667
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0.647059, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.14902, 0, 1, 1 )
+shortcut = SubResource( 5 )
+text = "Return to Level Select"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

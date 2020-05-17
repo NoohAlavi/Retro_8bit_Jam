@@ -1,0 +1,5 @@
+C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\bin\Debug\Retro_8bit_GameJam.dll
+C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\bin\Debug\Retro_8bit_GameJam.pdb
+C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\obj\Debug\Retro_8bit_GameJam.csprojAssemblyReference.cache
+C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\obj\Debug\Retro_8bit_GameJam.dll
+C:\Users\nooha\Desktop\Retro_8bit_GameJam\.mono\temp\obj\Debug\Retro_8bit_GameJam.pdb

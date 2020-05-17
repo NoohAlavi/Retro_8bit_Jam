@@ -1,0 +1,35 @@
+[gd_scene format=2]
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 240.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 80.0
+margin_top = 64.0
+margin_right = 246.0
+margin_bottom = 104.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Mute Volume"
+
+[node name="CheckButton2" type="CheckButton" parent="."]
+margin_left = 80.0
+margin_top = 96.0
+margin_right = 246.0
+margin_bottom = 136.0
+focus_mode = 0
+pressed = true
+enabled_focus_mode = 0
+text = "Show CRT"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World/Main.cs" type="Script" id=1]
+[ext_resource path="res://Game/Game.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/vignette.png" type="Texture" id=3]
+[ext_resource path="res://World/tv.png" type="Texture" id=4]
+[ext_resource path="res://World/crt.png" type="Texture" id=5]
+[ext_resource path="res://World/powerButton.png" type="Texture" id=6]
+[ext_resource path="res://World/screen.png" type="Texture" id=7]
+
+[node name="Main" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+gameScene = ExtResource( 2 )
+powerButton = NodePath("TV/Button")
+
+[node name="TV" type="CanvasLayer" parent="."]
+
+[node name="vignette" type="Sprite" parent="TV"]
+position = Vector2( 160, 98.375 )
+scale = Vector2( 0.265625, 0.20321 )
+texture = ExtResource( 3 )
+
+[node name="tv" type="Sprite" parent="TV"]
+visible = false
+position = Vector2( 160, 120 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 4 )
+
+[node name="crt" type="Sprite" parent="TV"]
+visible = false
+position = Vector2( 160.063, 121.375 )
+scale = Vector2( 0.149265, 0.108532 )
+texture = ExtResource( 5 )
+
+[node name="screen" type="Sprite" parent="TV"]
+position = Vector2( 160, 120 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="TV"]
+margin_left = 280.0
+margin_top = 200.0
+margin_right = 328.0
+margin_bottom = 238.0
+rect_scale = Vector2( 0.4, 0.4 )
+focus_mode = 0
+enabled_focus_mode = 0
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+margin_right = 320.0
+margin_bottom = 240.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
